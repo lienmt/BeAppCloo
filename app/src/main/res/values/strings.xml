@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">BeAppCloo</string>
+    <string name="app_name_desc">BeApp - BiCloo - BeAppCloo</string>
+    <string name="title_home">BiCloo</string>
+    <string name="title_map">Plan</string>
+    <string name="title_favorites">Favoris</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_setting">Paramètres</string>
+
+    <string name="title_reload">Rechargez les données</string>
+    <string name="title_filter">Filtrez</string>
+    <string name="title_search">Recherchez</string>
+
+    <string name="empty_list">On n\'a pas trouvé points bicloo à vous montrer</string>
+    <string name="empty_view">Under Construction</string>
+
+    <string name="permission_explanation">Allow this app to use your location to show distance to attractions?</string>
+    <string name="permission_explanation_action">OK</string>
+    <string name="permission_storage_explanation">Allow this app to access your storage?</string>
+    <string name="permission_storage_explanation_action">OK</string>
+
+    <string name="nointernet_explanation">Vous n\'avez pas de connexion Internet</string>
+    <string name="nointernet_explanation_title">Attention !</string>
+    <string name="nointernet_explanation_action">OK</string>
+
+    <string name="text_closed_station">Point fermé</string>
+
+    <string name="title_address_title">Error</string>
+    <string name="title_address_msg">Nothing found ! Essayez « Doulon Nantes » et « Talensac Nantes » </string>
+    <string name="title_address_action">OK</string>
+</resources>

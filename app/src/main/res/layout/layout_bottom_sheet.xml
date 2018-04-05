@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="200dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/icons"
+        android:padding="@dimen/small_margin">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="?android:textAppearanceMedium"
+            android:layout_marginEnd="60dp"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/imgFav"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignTop="@+id/textTitle"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/small_margin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heartoutline48"
+            android:tint="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/textAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:layout_toStartOf="@+id/imgFav"
+            android:layout_alignStart="@+id/textTitle"
+            android:ellipsize="end"
+            android:maxLines="3"
+            style="?android:textAppearanceSmall"
+            tools:text="Address goes here long long" />
+
+        <TextView
+                android:id="@+id/textDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 m"
+                android:layout_below="@+id/imgFav"
+                android:layout_alignParentEnd="true"
+                style="?android:textAppearanceSmall"/>
+
+        <RelativeLayout
+            android:id="@+id/rlInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textAddress"
+            android:layout_marginTop="@dimen/spacing_mlarge"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin">
+
+            <ImageView
+                android:id="@+id/imgBicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/spacing_medium"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bike48"
+                android:tint="@color/colorAccent"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/textBicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imgBicy"/>
+
+            <ImageView
+                android:id="@+id/imgParking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/spacing_medium"
+                android:scaleType="fitCenter"
+                android:src="@drawable/parking48"
+                android:tint="@color/colorAccent"
+                android:layout_toEndOf="@+id/textBicy"
+                android:layout_marginStart="@dimen/spacing_middle"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/textParking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imgParking"/>
+
+            <TextView
+                android:id="@+id/textLastUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="last update"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+        <ImageButton
+            android:id="@+id/btnNavigate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/navigation"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/rlInfo"/>
+
+        <TextView
+            android:id="@+id/textExtra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_below="@+id/btnNavigate"
+            android:visibility="invisible"
+            android:text="extra info" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

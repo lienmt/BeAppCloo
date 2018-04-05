@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mapFragmentContainer"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/llRouteInfo"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:padding="@dimen/tiny_margin"
+        android:gravity="center_vertical"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/textRouteDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Small.Inverse"
+            android:text="Distance"/>
+        <TextView
+            android:id="@+id/textRouteTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Small.Inverse"
+            android:text="Time"/>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnDirections"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_map_directions"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_gravity="bottom|end"
+        app:rippleColor="@color/colorAccent"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- Adding bottom sheet after main content -->
+    <include layout="@layout/layout_bottom_sheet"/>
+
+</android.support.design.widget.CoordinatorLayout>
