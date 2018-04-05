@@ -178,7 +178,6 @@ public class BiClooAdapter extends RecyclerView.Adapter<ViewHolder>
 
     @Override
     public Filter getFilter() {
-        //https://www.learn2crack.com/2017/03/searchview-with-recyclerview.html
         return new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {

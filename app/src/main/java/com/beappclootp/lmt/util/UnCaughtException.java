@@ -23,11 +23,9 @@ public class UnCaughtException implements Thread.UncaughtExceptionHandler {
 
     private static final String RECIPIENT = "lien.muguercia@gmail.com";
 
-    //private Thread.UncaughtExceptionHandler previousHandler;
     private Context context;
 
-    public UnCaughtException(Context ctx/*, UncaughtExceptionHandler previous*/) {
-        //previousHandler = previous;
+    public UnCaughtException(Context ctx) {
         context = ctx;
     }
 

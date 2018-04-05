@@ -185,7 +185,6 @@ public class BiClooListFragment extends Fragment {
      *
      **/
     private void startLocationUpdates() {
-        //https://developer.android.com/training/location/receive-location-updates.html
         if (Utils.checkFineLocationPermission(getActivity())) {
             LocationRequest locationRequest = LocationRequest.create();
             locationRequest.setFastestInterval(0);

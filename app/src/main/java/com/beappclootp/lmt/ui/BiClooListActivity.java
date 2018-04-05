@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.beappclootp.lmt.R;
+import com.beappclootp.lmt.util.UnCaughtException;
 import com.beappclootp.lmt.util.Utils;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -74,6 +75,10 @@ public class BiClooListActivity extends AppCompatActivity implements
         ButterKnife.bind(this);
 
         mContext = this;
+
+        // catch error
+        Thread.setDefaultUncaughtExceptionHandler(new UnCaughtException(
+                BiClooListActivity.this));
 
         checkPermissions(savedInstanceState);
         initToolBar();
@@ -228,7 +233,6 @@ public class BiClooListActivity extends AppCompatActivity implements
      */
     private void fineLocationPermissionGranted() {
         //TODO use a Service instead
-        //https://developer.android.com/training/location/retrieve-current.html#last-known
         FusedLocationProviderClient fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         if (Utils.checkFineLocationPermission(this)) {
             fusedLocationClient.getLastLocation()

@@ -623,8 +623,6 @@ public class BiClooMapFragment extends Fragment implements OnMapReadyCallback {
      *
      **/
     private void startLocationUpdates() {
-
-        //https://developer.android.com/training/location/receive-location-updates.html
         if (Utils.checkFineLocationPermission(getActivity())) {
             LocationRequest locationRequest = LocationRequest.create();
             locationRequest.setFastestInterval(0);
@@ -948,8 +946,6 @@ public class BiClooMapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     private void getGoogleDirections(String origin, String destination, final boolean hideMarkers, boolean walking) {
-        //https://stackoverflow.com/questions/40562312/android-google-maps-draw-a-path-between-two-points
-        //https://stackoverflow.com/questions/30163699/google-map-direction-api-using-retrofit?lq=1
         //TODO let user select transport mode
         NetworkService networkService = NetServiceClient.setupClient(false).create(NetworkService.class);
         final String mode = walking ? "walking" : "bicycling";

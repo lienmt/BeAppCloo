@@ -13,20 +13,12 @@ import org.greenrobot.greendao.database.Database;
  */
 public class App extends Application {
 
-    //private DaoSession daoSession;
-
     @Override
     public void onCreate() {
         super.onCreate();
 
         //init DB using GreenDAO lib
         DBManager.setup(this);
-       /* DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, ENCRYPTED ? "bicloo-db-encrypted" : "bicloo-db");
-        Database db = ENCRYPTED ? helper.getEncryptedWritableDb("biclopassword") : helper.getWritableDb();
-        daoSession = new DaoMaster(db).newSession();*/
     }
 
-   /* public DaoSession getDaoSession() {
-        return daoSession;
-    }*/
 }
